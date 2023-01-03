@@ -7,10 +7,12 @@ body{
     font-family: 'Raleway', sans-serif;
     font-size: 1em;
     color:  black;
+    background-color: white;
 }
 
 a{
     text-decoration: none;
+    padding: 30px;
 }
 
 i{
@@ -74,11 +76,13 @@ button{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 0px 15px 15px 0px;
 }
+
 .Filtres-Recherche{
     display: flex;
     flex-direction: row;
     justify-content:flex-start;
-    gap: 50px;
+    margin: auto;
+    gap: 30px; 
 }
 
 .Carre-Offre{
@@ -97,11 +101,14 @@ button{
     height: 100%;
     object-fit: cover;
 }
+
 footer{
     left: 3.33%;
     right: 3.68%;
     top: 0%;
     bottom: -10.84%;
     background: #D9D9D9;
+    border-radius: 25px;
+    border: 2px solid #D9D9D9;
 }
 
