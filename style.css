@@ -1,45 +1,99 @@
-*{
-    margin: 0;
-    padding: 20px;
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-body{
+.logo{
+    height: 19px;
+}
+
+body,
+span{
     font-family: 'Raleway', sans-serif;
     font-size: 1em;
     color:  black;
-    background-color: white;
+    font-style: normal;
+    font-weight: 700;
+    margin: 0 auto;
+    max-width: 1400px;
 }
 
+body{
+    background-color: white;
+    padding: 44px 50px 0px 50px;
+}
 a{
     text-decoration: none;
-    padding: 30px;
+    color: black;
+}
+
+nav > a{
+    padding: 30px
+    
+}
+nav >a:hover{
+    color:  #0065FC;
+    border-top: 2px solid #0065FC;
 }
 
 i{
     color: #0065FC;
-    padding-right: 20px;
+    padding-right: 10px;
 }
 
-h1{
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 700;
+h1,
+h2{
     font-size: 22px;
     line-height: 26px;
 }
 
-h2{
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 21px;
+h2,p{
+    padding: 20px 20px 20px 0;
 }
 
+.filtres-recherche h2{
+    padding: 0;
+}
 h3{
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 700;
     font-size: 17px;
     line-height: 20px;
     border: 2px solid #D9D9D9;
@@ -47,27 +101,57 @@ h3{
     padding: 4px 20px;
 }
 
+h3:hover,
+.offre-marseille:hover,
+.offre-populaire:hover{
+    background-color: #DEEBFF;
+}
+
 h4{
-    font-family: 'Raleway';
-    font-style: normal;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+p,
+li{
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
-    
 }
 
-header,
-footer{
+header{
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: center; 
     justify-content: space-between;
-    padding: 20px 50px;
+    padding: 50px 20px 20px 0px;
 }
 
-.site-search{
-    padding: 15px 16px;
-    gap: 10px;
+
+label,
+input,
+button{
+    height: 49px;
+    margin-bottom: 20px;
+}
+
+
+label{
+    border-radius: 15px 0px 0px 15px;
+    border: 3px solid #D9D9D9;
+    background-color: #D9D9D9;
+    width: 50px; 
+    padding: 11px 5px 13px 10px;      
+}
+
+.fa-location-dot{
+    color: black;
+}
+
+input{
+    width: 282px;
+    border: 1px solid #D9D9D9;
+    margin: -10px; 
 }
 
 button{
@@ -75,40 +159,348 @@ button{
     border: 1px solid #0065FC;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 0px 15px 15px 0px;
+    width: 132px;  
+    color: white; 
+    display: inline;
 }
 
-.Filtres-Recherche{
+.filtres-recherche{
     display: flex;
     flex-direction: row;
     justify-content:flex-start;
     margin: auto;
     gap: 30px; 
 }
+/*invert pour le @query mobile*/
+.filtre-recherche-bordure{
+    display: flex;
+    flex-direction: row;
+}
 
-.Carre-Offre{
+.regroupement-offre{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    justify-content:flex-start;
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.regroupement-offre h2,
+.regroupement-offre p,
+.regroupement-offre h4{
+   margin-left: 20px;
+}
+
+.regroupement-offre i{
+    padding-right: 5px;
+}
+
+.carre-offre-marseille{
+    height: 100%;
+    width: 70%;
+}
+
+
+.carre-offre-populaire{
+    width: 30%;
+    height: 625px;
+}
+
+.carre-offre-marseille,
+.carre-offre-populaire{
     border: 2px solid #D9D9D9;
     border-radius: 25px;
     background: #D9D9D9;
 }
 
-.Offre{
+.carre-offre-flex,
+.carre-offre-flex-bis{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; 
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.offre-image-marseille,
+.offre-image-populaire,
+.activite-cadre{    
+    object-fit: cover;
+    max-width: 100%;
+    width: 100%;
+    padding: 0px; 
+    box-sizing: border-box;  
+}
+
+.fa-star{
+    width:12px;
+    height:12px;
+}
+
+img.offre-image-populaire{
+    border: 5px solid #FFFFFF;
+    border-radius: 20px 0px 0px 20px;
+}
+
+.offre-marseille,
+.offre-populaire{
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
     border: 2px solid #D9D9D9;
     border-radius: 25px;
     background: white;
+    margin-right: 20px;
+    margin-bottom: 30px;
 }
-.Offre img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+
+.offre-marseille{
+    width: 246px;
+}
+
+.offre-image-marseille{
+    height: 124px;
+    width: 246px;
+    border-radius: 20px 20px 0px 0px;
+    padding: 5px;
+}
+
+.offre-populaire{
+    width: 343px;
+    height: 144px;
+    display: flex;
+}
+
+.offre-image-populaire{
+    height: 144px;
+    width: 137px;
+    align-self: flex-start;
+}
+
+.offre-populaire-texte{
+    flex: 1 1 auto;
+    position: relative;
+}
+
+.offre-populaire-texte p{
+    padding-top: 10px;
+}
+
+.score-star{
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+}
+
+.activite-flex{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+figure.activite-cadre,
+figcaption.activite-cadre{
+    height: 445px;
+}
+
+figure{
+    display: block;
+}
+
+.activite-cadre{
+    height: 388px;  
+    width: 302px;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+figure.activite-flex{
+    margin-inline-start: 0px;
+    margin-inline-end: 60px;
+}
+
+.figcaption-activite-cadre{
+    height: 56px;
+    background: #FFFFFF;
+    border-radius: 0px 0px 20px 20px;
+    border: 1px solid white;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+figcaption{
+    margin-left: 20px;
 }
 
 footer{
-    left: 3.33%;
-    right: 3.68%;
-    top: 0%;
-    bottom: -10.84%;
+    display: flex;
     background: #D9D9D9;
-    border-radius: 25px;
     border: 2px solid #D9D9D9;
+    align-items: flex-start;
+    padding: 30px 0px 30px 0px;
+    justify-content: space-around;
+    height: 225px;
 }
 
+ul{
+    list-style-type: none;  
+}
+
+li{
+    padding-top: 20px;  
+}
+
+
+footer div{
+    width: 25%;
+}
+
+
+
+@media all and (max-width: 991px){
+    .filtres-recherche{
+        gap: 10px;
+    }
+    .filtre-recherche-bordure{
+        gap: 5px;
+    }
+    .introduction h2,
+    .introduction p{
+        padding: 10px 0 10px 0;
+    }
+    
+    .regroupement-offre{
+        flex-direction: column;
+    }
+
+    .carre-offre-flex-bis{
+        flex-wrap: nowrap;
+    }
+
+    .carre-offre-marseille{
+        width: 90%;
+    }
+
+    .offre-marseille{
+        width: 30%;
+    }
+    .carre-offre-populaire{
+        flex-direction: row;
+        justify-content: center;
+        width: 90vw;
+        height: 278px;
+    }
+    .offre-populaire{
+        width: 33%;
+    }
+    .offre-populaire-texte{
+        margin: -10px;
+    }
+    .offre-populaire p{
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        padding: 20px 0 20px 0;
+    }
+    .offre-populaire h4{
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 15px;
+    }
+}
+
+@media all and (max-width: 767px) {
+   
+    header{
+        flex-direction: column;
+    }
+    nav{
+        padding-top: 20px;
+    }
+    nav > a{
+        padding: 18px;
+    }
+    label{
+        width: 20%;
+    }
+    input{
+        width: 50%;
+    }
+    button{
+        width: 30%;
+    }
+    .filtres-recherche h3{
+        height: 20px;
+        max-width: 100%;
+        font-size: 11px;
+        padding: 2px 10px;
+    }
+
+    .filtres-recherche,
+    .filtre-recherche-bordure{
+        flex-wrap: wrap;
+    }
+
+    .filtre-recherche-bordure
+    .regroupement-offre{
+        flex-direction: column-reverse; 
+    }
+
+    .carre-offre-marseille,
+    .offre-marseille,
+    .carre-offre-populaire{
+        width: 100%;
+        height: 100%;
+    }
+
+    .offre-marseille{
+        height: 199px;
+        margin-right: 0;
+    }
+
+    .offre-populaire{
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+
+    .carre-offre-flex-bis{
+        flex-direction: column;
+    }
+
+    .offre-image-marseille{
+        height: 124px;
+        width: 100%;
+    }
+
+    .activite-flex{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 24px;
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+    }
+    .activite-cadre{
+        width: 100vw;
+        height: 190px;
+    }
+    footer{
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        padding-left: 20px;
+    }
+
+    footer div{
+        width: 100%;
+    }
+    li{
+        padding-top: 10px;
+    }
+
+ 
+}
