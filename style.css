@@ -743,4 +743,8 @@ footer div{
     nav > a {
         padding: 0.6em;
     }
+
+    .regroupement-offre i {
+        padding-right: 20px;
+    }
 }
