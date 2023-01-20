@@ -307,7 +307,7 @@ button > span{
 
 .offre-marseille i,
 .offre-populaire i{
-    padding-right: 5px;
+    padding-right: 5px!important;
 }
 
 .carre-offre-marseille{
@@ -563,10 +563,9 @@ footer div{
     }
     
     .offre-populaire p{
-        font-weight: 700;
         font-size: 14px;
         line-height: 16px;
-        padding: 20px 0 20px 0;
+        padding: 5px 0 20px 0;
     }
     .offre-populaire h4{
         font-weight: 400;
