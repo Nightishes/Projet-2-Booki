@@ -29,18 +29,7 @@ footer, header, hgroup, menu, nav, section {
 ol, ul {
 	list-style: none;
 }
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+
 
 /* début CSS :introduction et mise en page générale*/
 body,
@@ -57,9 +46,8 @@ body{
     background-color: white;
     padding: 44px 50px 0px 50px;
     line-height: 1;
-    width:80%;
-        margin-left:auto;
-        margin-right:auto;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 .offre-image-marseille,
@@ -68,10 +56,6 @@ body{
     object-fit: cover;
     max-width: 100%;
     box-sizing: border-box;  
-}
-
-figure{
-    display: block;
 }
 
 nav > a{
@@ -93,29 +77,29 @@ i{
     color: #0065FC;
     padding-right: 10px;
 }
-
+  
 h1,
 h2{
     font-size: 22px;
     line-height: 26px;
 }
 
-h2,p{
+h2,
+p{
     padding: 30px 0px 10px 0px;
 }
 
 h3{
     font-size: 16px;
     line-height: 19px;
-    font-weight: 700;
 }
 
 .filtres-recherche p{
     font-size: 17px;
     line-height: 20px;
-    border: 2px solid #F2F2F2;
+    border: 2px solid #D9D9D9;
     border-radius: 25px;
-    padding: 10px;
+    padding: 7px 20px 6px 20px;
     font-weight: 700;
 }
 
@@ -126,27 +110,49 @@ h3{
 }
 
 .offre-marseille figcaption,
+.offre-populaire figcaption,
+p,
+li{
+    font-weight: 400;
+}
+
+.offre-marseille figcaption,
 .offre-populaire figcaption{
     font-size: 14px;
     line-height: 16px;
-    font-weight: 400;
 }
 
 p,
 li{
-    font-weight: 400;
     font-size: 16px;
     line-height: 19px;
 }
 
+p{
+    display: inline;
+}
+
+.regroupement-offre p{
+    display: block;
+}
+
 li{
-    padding-top: 20px;  
+    padding-top: 12px;  
+    height: 30px;
 }
 
 figcaption{
-    margin-left: 15px;
     margin-bottom: 10px;
+    padding: 5px 0 0 0;
 }
+
+span, 
+.filtres-recherche h2,
+footer h2{
+    font-size: 18px;
+    line-height: 21px;
+}
+  
 /*fin propriétés générales; début introduction*/
 
 .logo{
@@ -175,8 +181,8 @@ button{
 
 label{
     border-radius: 15px 0px 0px 15px;
-    border: 3px solid #F2F2F2;
-    background-color: #F2F2F2;
+    border: 3px solid #D9D9D9;
+    background-color: #D9D9D9;
     width: 50px; 
     padding: 11px 5px 13px 10px;      
 }
@@ -187,7 +193,7 @@ label{
 
 input{
     width: 282px;
-    border: 1px solid #F2F2F2;
+    border: 1px solid #D9D9D9;
     margin: -10px; 
 }
 
@@ -203,11 +209,11 @@ button{
 }
 
 button > span{
-    font-size: 18px;
     line-height: 21px;
     letter-spacing: 0em;
     text-align: center;
     color: white;
+    margin-left: 10px;
 }
 
 .fa-magnifying-glass{ 
@@ -222,6 +228,7 @@ button > span{
     justify-content:flex-start;
     margin: auto;
     gap: 30px; 
+    padding-bottom: 40px;
 }
 
 .filtres-recherche h2{
@@ -232,7 +239,7 @@ button > span{
 .filtre-recherche-bordure{
     display: flex;
     flex-direction: row;
-    gap: 40px;
+    gap: 36px;
 }
 
 .fa-info{
@@ -252,15 +259,16 @@ button > span{
     justify-content:flex-start;
     gap: 40px;
     padding-bottom: 40px;
+    padding-top: 8px;
 }
 
 .regroupement-offre h2,
 .regroupement-offre span{
-    margin-left: 36px;
+    margin-left: 40px;
 }
 
 .regroupement-offre h2{
-    padding: 42px 0 23px 0;
+    padding: 42px 20px 0px 0;
 }
 
 .regroupement-offre span{
@@ -269,12 +277,8 @@ button > span{
     display: inline-block;
 }
 
-.regroupement-offre figcaption{
-    padding: 10px 0 0 0;
-}
-
 .carre-offre-populaire h2{
-    margin-left: 12px; /* décalé car priorité cascading*/
+    margin-left: 32px; /* décalé car priorité cascading*/
 }
 
 .carre-offre-flex h2,
@@ -298,11 +302,7 @@ button > span{
 }
 
 .fa-chart-line{
-    float: right;
-}
-
-.regroupement-offre i{
-    padding-right: 30px;
+    margin-left: 21%;
 }
 
 .offre-marseille i,
@@ -320,10 +320,10 @@ button > span{
 
 .carre-offre-marseille,
 .carre-offre-populaire{
-    border: 2px solid #F2F2F2;
+    border: 2px solid #D9D9D9;
     border-radius: 25px;
-    background: #F2F2F2;
-    min-height: 701px;
+    background: #D9D9D9;
+    height: 650px;
 }
 
 .carre-offre-flex,
@@ -331,24 +331,27 @@ button > span{
     display: flex;
     flex-direction: row; 
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    padding: 0px 20px 0px 20px;
 }
 
 .carre-offre-flex-bis{
     flex-direction: column;
-    gap: 20px;
 }
 
 .fa-star{
     width:12px;
     height:12px;
+}
+
+.offre-populaire .fa-star{
     padding: 20px 0 0 0;
 }
 
 .offre-marseille,
 .offre-populaire{
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-    border: 2px solid #F2F2F2;
+    border: 2px solid #D9D9D9;
     border-radius: 25px;
     background: white;  
     margin-top: 20px;
@@ -376,7 +379,7 @@ button > span{
 }
 
 .offre-image-populaire{
-    height: 144px;
+    height: 151px;
     width: 40%;
     align-self: flex-start;
     border: 5px solid #FFFFFF;
@@ -397,7 +400,7 @@ button > span{
     bottom: 0;
     margin: 0;
 }
-/*Fin regroupement offre, début activité Marseilleµ*/
+/*Fin regroupement offre, début activité Marseille (Les plus populaires)*/
 
 .activite-flex{
     display: flex;
@@ -406,6 +409,7 @@ button > span{
     justify-content: flex-start;
     gap: 40px;
     margin-bottom: 40px;
+    padding-top: 18px;
 }
 
 figure.activite-cadre,
@@ -416,8 +420,7 @@ figcaption.activite-cadre{
 .activite-cadre{
     height: 388px;  
     width: 302px;
-    background-size: cover;
-    border-radius: 20px;
+    border-radius: 20px 20px 0px 0px;
 }
 
 figure.activite-flex{
@@ -431,17 +434,17 @@ figure.activite-flex{
     border-radius: 0px 0px 20px 20px;
     border: 1px solid white;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-    padding-top: 10px;
+    padding: 20px 0 0 15px;
 }
 
 /*fin activité Marseille, début Footer*/
 
 footer{
     display: flex;
-    background: #F2F2F2;
-    border: 2px solid #F2F2F2;
+    background: #D9D9D9;
+    border: 2px solid #D9D9D9;
     align-items: flex-start;
-    padding: 30px 0px 30px 0px;
+    padding: 30px 41px 30px 0px;
     justify-content: space-around;
     height: 225px;
 }
@@ -450,7 +453,7 @@ footer div{
     width: 25%;
 }
 
-@media all and (min-width: 992px) and (max-width:1200px){
+@media all and (min-width: 992px) and (max-width:1330px){
     
     .filtre-recherche-bordure {
         display: flex;
@@ -459,16 +462,7 @@ footer div{
     }
 
     .filtres-recherche p {
-        padding: 2px 5px 2px 5px;
-    }
-
-
-    .filtres-recherche h2 {
-        margin-top: 0px;
-    }
-
-    .fa-chart-line {
-         float: none;
+        font-size: 1.7vmin;
     }
 
     .offre-marseille h3{
@@ -480,27 +474,39 @@ footer div{
         padding: 0;
     }
 
-    .carre-offre-populaire{
-        min-height: 727px;
-    }
     .offre-populaire h3 {
         margin-top: 5px;
+    }
+
+    .fa-chart-line{
+        margin-left: 5%;
+    }
+
+    .carre-offre-flex-bis p,
+    .carre-offre-flex-bis h3{
+        margin-left: 0px;
+    }
+
+    .regroupement-offre {
+        gap: 20px;
+    }
+
+    .regroupement-offre span {
+        margin-top: 20px;
     }
 }
 
 
-@media all and (max-width: 991px){
+@media all and (min-width:768px) and (max-width: 991px){
 
     body{
         padding: 48px 72px 0px 72px;
-    }
-    .filtres-recherche p{
-        padding: 4px 5px 4px 5px;
     }
 
     .filtres-recherche{
         gap: 10px;
     }
+
     .filtre-recherche-bordure{
         gap:20px;
     }
@@ -511,49 +517,61 @@ footer div{
     }
     
     .filtres-recherche h2 {
-        margin-top: 4px;
+        margin-top: 7px;
     }
 
     .filtres-recherche p{
-        font-size: 1.7vmin;
-        padding: 7px 5px 6px 5px
+        font-size: max(min(1.3vw, 1.5vmin), 1.3vmin);
+        padding: 7px 20px 6px 18px;
     }
 
     .filtres-recherche{
-        padding: 2px 4px;
+        padding-bottom: 38px;
         min-height: 40px;
     }
+
     .regroupement-offre{
         flex-direction: column;
-    }
-    .regroupement-offre h2, 
-    .regroupement-offre span {
-        margin-left: 23px;
+        padding-top: 37px;
     }
 
     .carre-offre-flex-bis{
         flex-wrap: nowrap;
         flex-direction: row;
+        padding: 0 40px 0 40px;
+        gap: 5px;
+        margin: -20px 0px 48px 0px;
     }
 
     .carre-offre-marseille, 
     .carre-offre-populaire{
         width: 100%;
-        min-height: 100%;
+        height: 100%;
+    }
+
+    .carre-offre-marseille h2{
+        padding: 42px 0 0px 0;
     }
 
     .offre-marseille{
         width: 30%;
     }
+    
     .carre-offre-populaire h2 {
         padding: 34px 0 16px 13px;
     }
+
+    h2 i{
+        padding-right: 30px; 
+    }
+
     .carre-offre-populaire{
         flex-direction: row;
         justify-content: center;
         width: 80vw;
-        min-height: 278px;
+        height: 278px;
     }
+
     .offre-populaire{
         width: 23vw;
     }
@@ -567,53 +585,72 @@ footer div{
         line-height: 16px;
         padding: 5px 0 20px 0;
     }
-    .offre-populaire h4{
-        font-weight: 400;
-        font-size: 13px;
-        line-height: 15px;
+
+    figure.activite-cadre,
+    figcaption.activite-cadre{
+     height: 268px;
     }
 
+    .activite-cadre {
+        height: 200px;
+        width: 302px;
+    }
+
+    .activite-flex{
+        padding-top: 34px;
+    }
+
+    .figcaption-activite-cadre {
+        padding: 5px 36px 0 15px;
+    }
     footer{
-        height: 191px;  
+        height: 191px; 
+        padding: 15px 56px 50px 50px;
+        justify-content: space-between; 
     }
 
-    footer h2{
-        font-size: 18px;
-    }
     footer div{
-        width: 27%;
+        width: 30%;
     }
+
 }
 
 @media all and (max-width: 767px) {
 
-   body{
-    padding: 21px 20px 0 20px;
-   }
-
-    h2,p{
-        margin-top: 10px;
+    body{
+        padding: 21px 0 0 0;
     }
+    
+    .preambule{
+        padding: 0 20px 0 20px;
+    }
+
+    nav > a {
+    display: inline-block;
+    padding: 30px 30px 0px;
+    }
+
     header{
         flex-direction: column;
     }
+
     nav{
         padding-top: 38px;
     }
    
-
     nav >a:hover{
         color:  #0065FC;
         border-bottom: 3px solid #0065FC;
         border-top: 0px solid white;
     }
+
     label{
         width: 20%;
-        margin-left: 10px;
     }
     input{
-        width: 67%;
+        width: 75%;
     }
+
     button{
         width: 12%;
         padding: 2px 0px 0px 4px;
@@ -633,23 +670,29 @@ footer div{
         color: white;
     }
 
-    .filtres-recherche p{
+    .fa-info {
+        margin-right: 11px;
+    }
+    
+    .filtres-recherche h2 {
+        margin-top: 0px;
+    }
+
+    .filtres-recherche p {
         max-height: 50px;
-        min-width: 30vw;
-        max-width: 160px;
-        font-size: 11px;
-        padding: 6px 5px 6px 4px;
+        min-width: 29vw;
+        padding: 19px 54px 18px 10px;
         font-weight: 700;
         font-size: 2.8vmin;
     }
 
     .filtres-recherche,
     .filtre-recherche-bordure{
-        flex-wrap: wrap;
+        flex-wrap: wrap; 
     }
-
-    h2, p{
-        padding: 0;
+    
+    .filtre-recherche-bordure{
+        gap: 15px;
     }
 
     .regroupement-offre{
@@ -657,10 +700,27 @@ footer div{
         margin-top: 45px;
     }
 
+    .regroupement-offre p{
+        font-size: 14px;
+    }
+
+   
+    h2 i{
+        visibility: hidden;
+    }
+
+    
+    h2,
     .regroupement-offre h2{
-         margin-left: 10px;
-         padding: 5px 0 5px 0;
+        margin-left: 25px;
+    }
+    .regroupement-offre h2{
+        padding: 26px 0 5px 0;
         
+    }
+
+    .preambule h2 {
+        margin-left: 0;
     }
 
     .offre-populaire h3{
@@ -671,31 +731,39 @@ footer div{
         margin-top: 0;
         padding: 0;
     }
+
     .regroupement-offre span{
         display: none;
     }
 
-    .carre-offre-marseille,
-    .offre-marseille,
-    .carre-offre-populaire,
-    .offre-populaire{
-        width: 95%;
-        height: 100%;
-        max-width: 90vw;
-    }
-
-    .offre-marseille{   
-        margin-right: 0;
-        margin-left: 0;
-    }
-
-    .offre-populaire{
-        border: 0;
-        margin-left: 5px;
-    }
-
-    .carre-offre-flex-bis{
+    .carre-offre-flex-bis,
+    .carre-offre-flex{
         flex-direction: column;
+        padding: 0px 0 57px 0;
+    }
+
+    .carre-offre-marseille,
+    .carre-offre-populaire,
+    .activite-cadre{
+        width: 94vw;
+        height: 100%;
+    }
+
+    
+    .offre-populaire, 
+    .offre-marseille {
+        width: 90%;
+        height: 100%;
+        margin: 20px 20px 0 20px;
+    }
+
+    .carre-offre-marseille{
+        background-color: white;
+        border: none;
+    }
+
+    .offre-populaire{
+        border: none;
     }
 
     .offre-image-marseille{
@@ -713,37 +781,65 @@ footer div{
         height: auto;
     }
     
-    .activite-cadre{
-        width: 100vw;
-        height: 190px;
+    .figcaption-activite-cadre{
+        height: 40px;   
     }
+
+    .offre-image-marseille, 
+    .offre-image-populaire, 
+    .activite-cadre {
+        max-width: none;
+    }
+
+    .activite-cadre{
+        height: 190px;  
+    }
+
     footer{
         flex-direction: column;
-        width: 100%;
+        padding: 0px 29px 61px 29px;
         height: 100%;
-        padding: 0px 0px 40px 0px;
+        width: 90vw;
     }
 
     footer div{
         width: 100%;
-        text-align: center;
     }
     li{
         padding-top: 10px;
     }
 
+    footer h2{
+        padding: 35px 0 10px 0px;
+        margin-left: 0;
+    }
+
 }
 
-@media all and (max-width: 400px){
+@media all and (max-width: 500px){
+
     h2{
         font-size: 6vmin;
+    }
+
+    .filtres-recherche p{
+        padding: 19px 0px 18px 10px;
+        font-size: max(min(1.6vw, 1.6vmin), 3.1vmin);
+        min-width: 35vw;
+    }
+
+    .logement-annonce{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
     }
 
     nav > a {
         padding: 0.6em;
     }
 
-    .regroupement-offre i {
-        padding-right: 20px;
+    footer{
+        width: 83vw;
     }
 }
